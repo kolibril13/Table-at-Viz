@@ -1,8 +1,8 @@
 ---
-title: "Chapter 1: CSV to Blender"
+title: "Import Data via API"
 ---
 
-# Chapter 1: CSV to Blender
+# Import Data via API
 
 Here are 4 different approaches to load data into the Blender spreadsheet via API:
 
@@ -12,10 +12,10 @@ Here are 4 different approaches to load data into the Blender spreadsheet via AP
 4. **Excel** - Load from Excel files
 
 
-sdfsdf sdfsdf  sdfsdf
+
 ---
 
-# CSV to Blender
+## CSV to Blender
 
 Load data from a CSV file into Blender. 
 
@@ -52,7 +52,7 @@ print(obj.name)
 
 ---
 
-# DataFrame to Blender
+## DataFrame to Blender
 
 Load data directly from a Polars DataFrame.
 
@@ -71,7 +71,7 @@ obj = polars_df_to_bob(df, name="MeshVector")
 
 ---
 
-# JSON to Blender
+## JSON to Blender
 
 Load data from a Python dictionary (JSON-like structure) by converting it to a DataFrame first.
 
@@ -95,7 +95,7 @@ obj = polars_df_to_bob(df, name="MeshVector")
 
 ---
 
-# Excel to Blender
+## Excel to Blender
 
 Load data from an Excel file. This example has two parts: first we create an Excel file, then we read it into Blender.
 
