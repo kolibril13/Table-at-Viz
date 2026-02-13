@@ -192,3 +192,5 @@ df = pl.read_parquet(path)
 obj = polars_df_to_bob(df, name="MeshVector")
 ```
 
+![Parquet imported into Blender](assets/parquet-to-blender-result.png)
+
