@@ -36,3 +36,5 @@ csv_path.write_text(csv_data.getvalue().strip(), encoding="utf-8")
 obj = load_csv(csv_path)
 print(obj.name)
 ```
+
+![CSV imported into Blender](assets/csv-to-blender-result.png)
