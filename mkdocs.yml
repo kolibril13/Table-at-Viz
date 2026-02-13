@@ -1,0 +1,20 @@
+site_name: Table-at-Viz
+site_description: Documentation for visualizing tabular data
+site_url: ""
+
+theme:
+  name: mkdocs
+
+nav:
+  - Home: index.md
+
+docs_dir: docs
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+
