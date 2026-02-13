@@ -44,7 +44,7 @@ print(obj.name)
 !!! note
     String columns are stored as integers (indices). In Geometry Nodes, search for "CSV" to find the Index Switch node, which lets you access the actual string values.
 
-    ![Index Switch node](assets/index-switch-node.png)
+    <img src="../assets/index-switch-node.png" alt="Index Switch node" width="300">
 
 ---
 
