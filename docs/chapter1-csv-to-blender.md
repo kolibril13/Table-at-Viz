@@ -2,7 +2,18 @@
 title: "Chapter 1: CSV to Blender"
 ---
 
-# Chapter 1: CSV to Blender
+Here are 4 different approaches to load data into the Blender spreadsheet via API:
+
+1. **CSV** - Load from CSV files
+2. **DataFrame** - Load directly from Polars DataFrames
+3. **JSON** - Load from JSON/dictionary data
+4. **Excel** - Load from Excel files
+
+---
+
+# CSV to Blender
+
+Load data from a CSV file into Blender.
 
 ```python
 from io import StringIO
@@ -40,7 +51,11 @@ print(obj.name)
 ![CSV imported into Blender](assets/csv-to-blender-result.png)
 
 
+---
+
 # DataFrame to Blender
+
+Load data directly from a Polars DataFrame.
 
 ```py
 import polars as pl
@@ -55,9 +70,16 @@ df = pl.DataFrame([
 obj = polars_df_to_bob(df, name="MeshVector")
 ``` 
 
+---
+
 # JSON to Blender
 
+Load data from a Python dictionary (JSON-like structure) by converting it to a DataFrame first.
+
 ```py
+import polars as pl
+from csv_importer.parsers import polars_df_to_bob
+
 json_data = {
     "Intensity": ["Hello", "World"],
     "opacity": [0.34, 0.92],
@@ -70,11 +92,20 @@ json_data = {
 
 df = pl.DataFrame(json_data)
 obj = polars_df_to_bob(df, name="MeshVector")
-
 ```
 
+---
+
 # Excel to Blender
+
+Load data from an Excel file. This example has two parts: first we create an Excel file, then we read it into Blender.
+
+## Step 1: Create an Excel file (optional)
+
+Skip this if you already have an Excel file.
+
 ```py
+# Uncomment once to install:
 # import subprocess, sys
 # subprocess.check_call([sys.executable, "-m", "pip", "install", "xlsxwriter"])
 
@@ -94,7 +125,10 @@ path = temp_dir / "simple_excel_polars.xlsx"
 data_polars.write_excel(path)
 ```
 
+## Step 2: Load Excel into Blender
+
 ```py
+# Uncomment once to install:
 # import subprocess, sys
 # subprocess.check_call([sys.executable, "-m", "pip", "install", "fastexcel", "pyarrow"])
 
