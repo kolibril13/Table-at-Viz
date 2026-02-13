@@ -38,3 +38,33 @@ print(obj.name)
 ```
 
 ![CSV imported into Blender](assets/csv-to-blender-result.png)
+
+
+# DataFrame to Blender
+```py
+import polars as pl
+from csv_importer.parsers import polars_df_to_bob
+
+df = pl.DataFrame({
+    "Intensity": ["Hello", "World"],
+    "opacity": [0.34, 0.92],
+    "Is_Visible": [True, False],
+    "Star": [
+        [3.4, 3.5, 0.0],
+        [3.1, 5.6, 0.0]
+    ]
+})
+obj = polars_df_to_bob(df, name="MeshVector")
+``` 
+
+
+# JSON to Blender
+
+```py
+
+```
+
+# Excel to Blender
+```py
+
+```
