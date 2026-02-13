@@ -22,6 +22,7 @@ theme:
     - navigation.top
     - search.highlight
     - search.suggest
+    - content.code.copy
 
 nav:
   - Home: index.md
@@ -37,4 +38,11 @@ markdown_extensions:
   - admonition
   - toc:
       permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
 
