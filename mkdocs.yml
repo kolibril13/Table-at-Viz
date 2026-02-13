@@ -25,6 +25,7 @@ theme:
 
 nav:
   - Home: index.md
+  - Chapter 1 - CSV to Blender: chapter1-csv-to-blender.md
   - Blender Training Material: blender-training-material.md
 
 docs_dir: docs
