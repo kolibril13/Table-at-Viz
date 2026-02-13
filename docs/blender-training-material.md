@@ -18,7 +18,7 @@ Click **Load PDF** to view each document. The PDFs are ~50 MB each and will only
 <div id="pdf-day1" style="width: 100%; height: 80vh; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 8px; overflow: hidden; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; cursor: pointer; background: var(--md-code-bg-color);" onclick="this.innerHTML='<iframe src=\'../assets/blender_day1_course_jan-hendrik.pdf#navpanes=0&toolbar=0&view=FitH\' style=\'width:100%;height:100%;border:none;\'></iframe>'; this.style.cursor='default';">
   <div style="text-align: center;">
     <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">📄 Day 1 – Course Material</p>
-    <button class="md-button" style="pointer-events: none;">Load PDF (~81 MB)</button>
+    <button class="md-button" style="pointer-events: none;">Open in browser viewer (~81 MB)</button>
   </div>
 </div>
 
@@ -31,7 +31,7 @@ Click **Load PDF** to view each document. The PDFs are ~50 MB each and will only
 <div id="pdf-day2" style="width: 100%; height: 80vh; border: 1px solid var(--md-default-fg-color--lightest); border-radius: 8px; overflow: hidden; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; cursor: pointer; background: var(--md-code-bg-color);" onclick="this.innerHTML='<iframe src=\'../assets/blender_day2_course_jan-hendrik.pdf#navpanes=0&toolbar=0&view=FitH\' style=\'width:100%;height:100%;border:none;\'></iframe>'; this.style.cursor='default';">
   <div style="text-align: center;">
     <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">📄 Day 2 – Course Material</p>
-    <button class="md-button" style="pointer-events: none;">Load PDF (~45 MB)</button>
+    <button class="md-button" style="pointer-events: none;">Open in browser viewer (~45 MB)</button>
   </div>
 </div>
 
