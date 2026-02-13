@@ -22,9 +22,6 @@ import bpy
 
 from csv_importer.csv import load_csv
 
-# ----------------------------------
-# 1. CSV content
-# ----------------------------------
 csv_data = StringIO(
     """
 FloatVal,IntVal,BoolVal,StringVal
@@ -33,23 +30,16 @@ FloatVal,IntVal,BoolVal,StringVal
 """
 )
 
-# ----------------------------------
-# 2. Writable temp path
-# ----------------------------------
 temp_dir = Path(bpy.app.tempdir)
 csv_path = temp_dir / "example.csv"
 
 csv_path.write_text(csv_data.getvalue().strip(), encoding="utf-8")
 
-# ----------------------------------
-# 3. Load CSV
-# ----------------------------------
 obj = load_csv(csv_path)
 print(obj.name)
 ```
 
 ![CSV imported into Blender](assets/csv-to-blender-result.png)
-
 
 ---
 
