@@ -4,12 +4,13 @@ title: "Import Data via API"
 
 # Import Data via API
 
-Here are 4 different approaches to load data into the Blender spreadsheet via API:
+Here are 5 different approaches to load data into the Blender spreadsheet via API:
 
 1. **CSV** - Load from CSV files
 2. **DataFrame** - Load directly from Polars DataFrames
 3. **JSON** - Load from JSON/dictionary data
 4. **Excel** - Load from Excel files
+5. **Parquet** - Load from Parquet files
 
 
 
@@ -143,4 +144,45 @@ df = pl.read_excel(path, sheet_name="Sheet1")
 obj = polars_df_to_bob(df, name="MeshVector")
 ```
 
+---
+
+## Parquet to Blender
+
+Load data from a Parquet file. This example has two parts: first we create a Parquet file, then we read it into Blender.
+
+## Step 1: Create a Parquet file (optional)
+
+Skip this if you already have a Parquet file.
+
+```py
+import bpy
+import polars as pl
+from pathlib import Path
+
+data_polars = pl.DataFrame({
+    "MyFloat": [42.12, 12.33],
+    "Is_Visible": [True, False],
+    "Intensity": [10, 20],
+})
+
+temp_dir = Path(bpy.app.tempdir)
+path = temp_dir / "example.parquet"
+
+data_polars.write_parquet(path)
+```
+
+## Step 2: Load Parquet into Blender
+
+```py
+import bpy
+import polars as pl
+from pathlib import Path
+from csv_importer.parsers import polars_df_to_bob
+
+temp_dir = Path(bpy.app.tempdir)
+path = temp_dir / "example.parquet"
+
+df = pl.read_parquet(path)
+obj = polars_df_to_bob(df, name="MeshVector")
+```
 
