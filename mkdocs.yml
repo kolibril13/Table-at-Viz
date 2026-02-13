@@ -1,6 +1,6 @@
 site_name: Table-at-Viz
 site_description: Documentation for visualizing tabular data
-site_url: ""
+site_url: https://kolibril13.github.io/Table-at-Viz/
 
 theme:
   name: material
