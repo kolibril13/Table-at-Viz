@@ -96,6 +96,8 @@ df = pl.DataFrame(json_data)
 obj = polars_df_to_bob(df, name="MeshVector")
 ```
 
+![JSON imported into Blender](assets/json-to-blender-result.png)
+
 ---
 
 ## Excel to Blender
