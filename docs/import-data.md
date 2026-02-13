@@ -148,6 +148,8 @@ df = pl.read_excel(path, sheet_name="Sheet1")
 obj = polars_df_to_bob(df, name="MeshVector")
 ```
 
+![Excel imported into Blender](assets/excel-to-blender-result.png)
+
 ---
 
 ## Parquet to Blender
