@@ -12,21 +12,25 @@ The PDFs are embedded below using your browser's built-in PDF viewer.
 
 ## Day 1 – Course Material
 
-<iframe
-  src="/assets/blender_day1_course_jan-hendrik.pdf"
-  style="width: 100%; height: 80vh; border: none;"
-  loading="lazy"
-></iframe>
+<div style="width: 100%; height: 80vh; overflow: hidden;">
+  <iframe
+    src="/assets/blender_day1_course_jan-hendrik.pdf#navpanes=0&toolbar=0&view=FitH"
+    style="width: 100%; height: calc(100% + 40px); border: none; margin-top: -40px;"
+    loading="lazy"
+  ></iframe>
+</div>
 
 [Download Day 1 PDF](/assets/blender_day1_course_jan-hendrik.pdf)
 
 ## Day 2 – Course Material
 
-<iframe
-  src="/assets/blender_day2_course_jan-hendrik.pdf"
-  style="width: 100%; height: 80vh; border: none;"
-  loading="lazy"
-></iframe>
+<div style="width: 100%; height: 80vh; overflow: hidden;">
+  <iframe
+    src="/assets/blender_day2_course_jan-hendrik.pdf#navpanes=0&toolbar=0&view=FitH"
+    style="width: 100%; height: calc(100% + 40px); border: none; margin-top: -40px;"
+    loading="lazy"
+  ></iframe>
+</div>
 
 [Download Day 2 PDF](/assets/blender_day2_course_jan-hendrik.pdf)
 
