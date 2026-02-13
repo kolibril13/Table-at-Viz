@@ -70,6 +70,8 @@ df = pl.DataFrame([
 obj = polars_df_to_bob(df, name="MeshVector")
 ``` 
 
+![DataFrame imported into Blender](assets/dataframe-to-blender-result.png)
+
 ---
 
 ## JSON to Blender
