@@ -41,6 +41,11 @@ print(obj.name)
 
 ![CSV imported into Blender](assets/csv-to-blender-result.png)
 
+!!! note
+    String columns are stored as integers (indices). In Geometry Nodes, search for "CSV" to find the Index Switch node, which lets you access the actual string values.
+
+    ![Index Switch node](assets/index-switch-node.png)
+
 ---
 
 # DataFrame to Blender
