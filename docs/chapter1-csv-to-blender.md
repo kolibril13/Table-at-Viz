@@ -2,6 +2,8 @@
 title: "Chapter 1: CSV to Blender"
 ---
 
+# Chapter 1: CSV to Blender
+
 Here are 4 different approaches to load data into the Blender spreadsheet via API:
 
 1. **CSV** - Load from CSV files
@@ -13,7 +15,7 @@ Here are 4 different approaches to load data into the Blender spreadsheet via AP
 
 # CSV to Blender
 
-Load data from a CSV file into Blender.
+Load data from a CSV file into Blender. 
 
 ```python
 from io import StringIO
