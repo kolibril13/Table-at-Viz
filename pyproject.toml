@@ -1,0 +1,18 @@
+[project]
+name = "table-at-viz"
+version = "0.1.0"
+description = "Documentation for visualizing tabular data"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+dependencies = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.backends"
+
+[tool.uv]
+dev-dependencies = []
