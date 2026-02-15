@@ -59,9 +59,15 @@ Next, we define an `active_range` attribute. Cities are sorted by population, an
 
 ![Active range values in the spreadsheet](assets/blender-active-range-spreadsheet.png)
 
-We add a Sun light object for lighting and switch to the Cycles render engine.
+Next, we add city labels using a dedicated Geometry Nodes tree. It iterates over each city using a *For Each Element* node, reads the `stadt_name` attribute, and converts it to a text curve via *String to Curves*. The label is then positioned at the city's coordinates with a small offset. A *Float Curve* node controls the opacity based on the `active_range` attribute — labels fade in as their city becomes active, and a *Less Than* check ensures fully inactive cities stay hidden. This gives us animated labels that appear in sync with the circles.
 
-Finally, we add a separate scene for the overlay — showing the legend, title, data source, and attribution. This overlay is rendered separately from the main 3D scene and then combined in DaVinci Resolve.
+![City labels Geometry Nodes tree](assets/blender-city-labels-nodes.png)
+
+![City labels on the map](assets/blender-city-labels-result.png)
+
+Finally, we add a legend and the animation is done! The legend shows circle sizes for different population levels (100k–600k), generated with another Geometry Nodes setup using an *Index Switch*.
+
+![Legend and final result](assets/blender-cities-legend.png)
 
 [Download cities_by_size.blend](assets/cities_by_size.blend){ .md-button }
 
