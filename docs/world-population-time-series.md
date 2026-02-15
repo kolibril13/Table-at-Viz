@@ -71,4 +71,9 @@ Finally, we add a separate scene for the overlay: Showing the current year, titl
 
 [Download earth_population.blend](assets/earth_population.blend){ .md-button }
 
+
+Here's the final result:
+
+![World population time series](assets/world-population-time-series.png)
+
 If you come up with your own creations and post them online, you're welcome to tag me on [Bluesky](https://bsky.app/profile/kolibril13.bsky.social)!

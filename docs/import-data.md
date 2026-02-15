@@ -4,14 +4,15 @@ title: "Import Data via API"
 
 # Import Data via API
 
-Here are 5 different approaches to load data into the Blender spreadsheet via API:
+This page describes how to load data into the Blender spreadsheet via API using the [CSV Importer](https://extensions.blender.org/add-ons/csv-importer/) extension. These examples will only work when the extension is installed.
+
+Here are 5 different approaches:
 
 1. **CSV** - Load from CSV files
 2. **DataFrame** - Load directly from Polars DataFrames
 3. **JSON** - Load from JSON/dictionary data
 4. **Excel** - Load from Excel files
 5. **Parquet** - Load from Parquet files
-
 
 
 ---
