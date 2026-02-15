@@ -44,3 +44,7 @@ With this in place, we continue to add the data as bar charts using Geometry Nod
 To color the bars, we create a separate reference cylinder and assign a material to it. This material uses a Color Ramp driven by the Z height of each bar, so taller bars appear in warmer colors. The Geometry Nodes setup then applies this material to all instanced bars automatically.
 
 ![Bar material with height-based color ramp](assets/blender-bar-material.png)
+
+To animate the bars over time, we replace part of the node tree so that it reads the year columns dynamically and interpolates between them. A single value input drives the current year — using Floor and Ceiling, we look up the two neighboring columns by name, then mix between them based on the fractional part. This way, scrubbing through the timeline smoothly transitions the bar heights from one year to the next.
+
+![Animation node setup with year interpolation](assets/blender-animation-nodes.png)
