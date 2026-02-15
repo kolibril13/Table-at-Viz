@@ -46,6 +46,12 @@ print(obj.name)
 
 ![CSV imported into Blender](assets/csv-to-blender-result.png)
 
+For CSV files, there's also drag'n'drop support: Drag the file into Blender's viewport like this:
+
+<video controls width="100%">
+  <source src="../assets/demo_csv_dragndrop.mp4" type="video/mp4">
+</video>
+
 !!! note
     String columns are stored as integers (indices). In Geometry Nodes, search for "CSV" to find the Index Switch node, which lets you access the actual string values.
 
