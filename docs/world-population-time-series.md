@@ -40,3 +40,7 @@ Now we scale it to match the Earth's longitude and latitude, and adjust the colo
 With this in place, we continue to add the data as bar charts using Geometry Nodes:
 
 ![Bar charts on the world map in Blender](assets/blender-bar-charts.png)
+
+To color the bars, we create a separate reference cylinder and assign a material to it. This material uses a Color Ramp driven by the Z height of each bar, so taller bars appear in warmer colors. The Geometry Nodes setup then applies this material to all instanced bars automatically.
+
+![Bar material with height-based color ramp](assets/blender-bar-material.png)
