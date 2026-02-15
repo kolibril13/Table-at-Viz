@@ -47,4 +47,4 @@ To color the bars, we create a separate reference cylinder and assign a material
 
 To animate the bars over time, we replace part of the node tree so that it reads the year columns dynamically and interpolates between them. A single value input drives the current year — using Floor and Ceiling, we look up the two neighboring columns by name, then mix between them based on the fractional part. This way, scrubbing through the timeline smoothly transitions the bar heights from one year to the next.
 
-![Animation node setup with year interpolation](assets/blender-animation-nodes.png)
+![Animation node setup with year interpolation](assets/blender-animation-nodes.jpeg)
