@@ -6,6 +6,10 @@ title: World Population Time Series
 
 ![World population time series](assets/world-population-time-series.png)
 
+<video controls width="100%">
+  <source src="assets/latest_pop_web.mp4" type="video/mp4">
+</video>
+
 ## Preparing Data
 
 In this tutorial, we will learn how to visualize a time series of the world population. We will start with a simple CSV file that contains urban agglomeration population data from the [United Nations World Urbanization Prospects](https://population.un.org/wup/downloads?tab=Countries%20and%20Aggregates) (WUP2018).
@@ -45,6 +49,10 @@ To color the bars, we create a separate reference cylinder and assign a material
 
 ![Bar material with height-based color ramp](assets/blender-bar-material.png)
 
-To animate the bars over time, we replace part of the node tree so that it reads the year columns dynamically and interpolates between them. A single value input drives the current year — using Floor and Ceiling, we look up the two neighboring columns by name, then mix between them based on the fractional part. This way, scrubbing through the timeline smoothly transitions the bar heights from one year to the next.
+To animate the bars over time, we replace part of the node tree so that it reads the year columns dynamically and interpolates between them. A single value input drives the current year: using Floor and Ceiling, we look up the two neighboring columns by name, then mix between them based on the fractional part. This way, scrubbing through the timeline smoothly transitions the bar heights from one year to the next.
 
 ![Animation node setup with year interpolation](assets/blender-animation-nodes.jpeg)
+
+Finally, we add a separate scene for the overlay — showing the current year, title, data source, and a color legend. This overlay is rendered separately from the main 3D scene and then combined in DaVinci Resolve.
+
+![Overlay scene in Blender](assets/blender-overlay-scene.png)
