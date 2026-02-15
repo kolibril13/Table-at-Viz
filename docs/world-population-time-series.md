@@ -27,3 +27,12 @@ Now we will see the spreadsheet like this:
 
 ![CSV imported into Blender](assets/blender-csv-import.png)
 
+Next, we add a background image. A good choice is an [equirectangular projection](https://en.wikipedia.org/wiki/Equirectangular_projection) of the Earth, since the latitude and longitude values from our dataset map directly to x and y coordinates in this projection.
+
+![Equirectangular projection of the Earth](assets/equirectangular-projection.jpg)
+
+*Source: [Wikimedia Commons — Equirectangular projection](https://en.wikipedia.org/wiki/Equirectangular_projection#/media/File:Equirectangular_projection_SW.jpg)*
+
+Now we scale it to match the Earth's longitude and latitude, and adjust the colors with shader nodes:
+
+![Earth background with shader nodes in Blender](assets/blender-earth-material.png)
