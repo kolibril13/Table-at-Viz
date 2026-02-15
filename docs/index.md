@@ -14,4 +14,5 @@ This page is part of the documentation of the [**Project Table@Viz**](https://ww
 - [Animated World Population](world-population-time-series.md)
 - [German Cities by Population](cities-by-size.md)
 - [Network Visualization](creating-a-network.md)
+- [How to Build an Extension](how-to-build-an-extension.md)
 - [Blender Training Material](blender-training-material.md)
