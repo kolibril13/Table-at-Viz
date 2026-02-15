@@ -36,3 +36,7 @@ Next, we add a background image. A good choice is an [equirectangular projection
 Now we scale it to match the Earth's longitude and latitude, and adjust the colors with shader nodes:
 
 ![Earth background with shader nodes in Blender](assets/blender-earth-material.png)
+
+With this in place, we continue to add the data as bar charts using Geometry Nodes:
+
+![Bar charts on the world map in Blender](assets/blender-bar-charts.png)
