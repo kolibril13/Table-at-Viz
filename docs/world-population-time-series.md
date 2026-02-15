@@ -1,10 +1,10 @@
 ---
-title: World Population Time Series
+title: Animated World Population
 ---
 
-# World Population Time Series
+# Animated World Population
 
-In this tutorial, we will learn how to visualize a time series of the world population in Blender 5.0.1.
+In this tutorial, we will learn how to visualize a **time series of the world population** in Blender 5.0.1.
 
 Here's how the final result looks as an image:
 

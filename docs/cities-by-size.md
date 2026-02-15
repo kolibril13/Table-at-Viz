@@ -1,10 +1,10 @@
 ---
-title: Cities by Size
+title: German Cities by Population
 ---
 
-# Cities by Size
+# German Cities by Population
 
-In this tutorial, we will learn how to visualize German cities by population size in Blender 5.0.1.
+In this tutorial, we will learn how to visualize **German cities by population size** in Blender 5.0.1.
 
 Here's how the final result looks as an image:
 

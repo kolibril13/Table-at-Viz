@@ -1,10 +1,10 @@
 ---
-title: Creating a Network
+title: Network Visualization
 ---
 
-# Creating a Network
+# Network Visualization
 
-In this tutorial, we will learn how to visualize a network in Blender 5.0.1.
+In this tutorial, we will learn how to visualize a **network** in Blender 5.0.1.
 
 Here's how the final result looks as an image:
 
