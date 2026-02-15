@@ -4,7 +4,7 @@ title: Network Visualization
 
 # Network Visualization
 
-In this tutorial, we will learn how to visualize a **network** in Blender 5.0.1.
+In this demo, I will illustate how to visualize a **network** in Blender 5.0.1.
 
 Here's how the final result looks as an image:
 
@@ -12,14 +12,16 @@ Here's how the final result looks as an image:
 
 [Download network-visualization.blend](assets/network-visualization.blend){ .md-button }
 
+!!! warning "Advanced project"
+    This is quite an advanced project, so take it as inspiration for the overall steps. It might be a difficult endeavour to reproduce this 100%.
+
 ## What the visualization shows
 
 This visualization maps the dependency structure of Euclid's *Elements* across all 13 books. Each proposition in a book can reference definitions, postulates, common notions, and propositions from the same or earlier books. The more references a proposition accumulates (counted recursively), the taller its bar appears. Lines connect each proposition to its dependencies, so the web of logical connections across all books is revealed.
 
 ## Preparing Data
 
-!!! warning "Advanced project"
-    This is quite an advanced project, so take it as inspiration for the overall steps. It might be a difficult endeavour to reproduce this 100%.
+
 
 The dependency data was extracted from Euclid's *Elements*. A full reference of the original text is available here: [Euclid's Elements (PDF)](https://farside.ph.utexas.edu/books/Euclid/Elements.pdf).
 
@@ -1131,10 +1133,15 @@ and their recursive reference counts:
 
 </details>
 
-## Prepare data structure in blender
+## Prepare reference objects
 
+We need **4 different cylinders** representing the different element types (Definitions, Propositions, Postulates, Common Notions), each with a title label on it. The input modifier for each cylinder takes a **position**, **opacity**, and some helper inputs like **ScaleFactor**, **Object** reference, and **IndexofProp** to assign each cylinder to a specific book and position along a spiral.
 
+![Reference cylinders](assets/reference-cylinders.png)
 
+We also need **one connection line** object. Its input modifier takes a **start** and **end** object as reference points, plus an **opacity** value.
+
+![Reference line](assets/reference-line.png)
 
 
 
@@ -1424,5 +1431,18 @@ for book_idx, (book_name, book_data) in enumerate(all_books_processed.items()):
 </details>
 
 
+All of these modifier values can be animated and changed simultaneously, so it's possible to propagate these reference objects across all 13 books and create a visual like this:
+
+![Network top-down view](assets/network-topdown.png)
+
+![Network viewport](assets/network-viewport.png)
+
+Here's the key principle: each connection line takes two objects as inputs: the **Start** and **End** objects. The geometry nodes graph samples the position of each object and draws a curve between them. Along the way, it stores a `curve_factor` attribute. This is essential for applying the blue-to-white gradient in the shader.
+
+![Line geometry nodes](assets/line-geometry-nodes.png)
+
+The `curve_factor` attribute is then used in the shader via a Color Ramp to create the gradient along the line, together with an `op` attribute for controlling opacity.
+
+![Line shader](assets/line-shader.png)
 
 If you come up with your own creations and post them online, you're welcome to tag me on [Bluesky](https://bsky.app/profile/kolibril13.bsky.social)!
