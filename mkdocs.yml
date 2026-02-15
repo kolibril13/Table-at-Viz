@@ -28,6 +28,7 @@ nav:
   - Home: index.md
   - Import Data via API: import-data.md
   - World Population Time Series: world-population-time-series.md
+  - Cities by Size: cities-by-size.md
   - Blender Training Material: blender-training-material.md
 
 docs_dir: docs
