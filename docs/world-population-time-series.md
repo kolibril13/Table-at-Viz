@@ -16,6 +16,8 @@ And here as a video:
   <source src="../assets/latest_pop_web.mp4" type="video/mp4">
 </video>
 
+[Download earth_population.blend](assets/earth_population.blend){ .md-button }
+
 ## Preparing Data
 
 We start with a simple CSV file that contains urban agglomeration population data from the [United Nations World Urbanization Prospects](https://population.un.org/wup/downloads?tab=Countries%20and%20Aggregates) (WUP2018).
@@ -63,6 +65,10 @@ We add a Sun light object for lighting and switch to the Cycles render engine.
 
 ![Sun lighting and Cycles render engine](assets/blender-sun-lighting.png)
 
-Finally, we add a separate scene for the overlay — showing the current year, title, data source, and a color legend. This overlay is rendered separately from the main 3D scene and then combined in DaVinci Resolve.
+Finally, we add a separate scene for the overlay: Showing the current year, title, data source, and a color legend. This overlay is rendered separately from the main 3D scene and then combined in DaVinci Resolve.
 
 ![Overlay scene in Blender](assets/blender-overlay-scene.png)
+
+[Download earth_population.blend](assets/earth_population.blend){ .md-button }
+
+If you come up with your own creations and post them online, you're welcome to tag me on [Bluesky](https://bsky.app/profile/kolibril13.bsky.social)!
