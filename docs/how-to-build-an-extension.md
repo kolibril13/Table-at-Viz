@@ -16,3 +16,8 @@ This adds an `auto_load.py` script that automatically discovers every Panel, Ope
 
 ![Blender New Addon command in VS Code](assets/blender-new-addon-command.png)
 
+## Chapter 2: Adding Python Dependencies with Wheels
+
+Blender extensions can bundle third-party Python packages as `.whl` (wheel) files. The Python ecosystem has many well-maintained packages: e.g. **Pillow** for image manipulation, **Requests** for fetching data from the web, or **NetworkX** for creating and analyzing networks.
+
+A `build.py` script automates the entire process: downloading platform-specific wheels, updating `blender_manifest.toml`, and packaging the extension. Simply add your dependencies to the script and run it. For a working example, see [build.py from blur_hdri](https://github.com/kolibril13/blur_hdri/blob/main/build.py).
