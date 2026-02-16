@@ -21,3 +21,10 @@ This adds an `auto_load.py` script that automatically discovers every Panel, Ope
 Blender extensions can bundle third-party Python packages as `.whl` (wheel) files. The Python ecosystem has many well-maintained packages: e.g. **Pillow** for image manipulation, **Requests** for fetching data from the web, or **NetworkX** for creating and analyzing networks.
 
 A `build.py` script automates the entire process: downloading platform-specific wheels, updating `blender_manifest.toml`, and packaging the extension. Simply add your dependencies to the script and run it. For a working example, see [build.py from blur_hdri](https://github.com/kolibril13/blur_hdri/blob/main/build.py).
+
+!!! note
+    Place the `build.py` script one level above the directory where your add-on lives.
+
+For example, when adding **Pillow** as a dependency, this is how the folder structure would look after running `build.py` — with platform-specific `.whl` files in a `wheels` folder and the final `.zip` packages ready for upload:
+
+![Folder structure after building with Pillow wheels](assets/build-py-wheels.png)
